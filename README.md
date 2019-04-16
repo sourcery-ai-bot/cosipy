@@ -58,6 +58,7 @@ with the example.
 * gdal (e.g. in Debian-based Linux distributions package called gdal-bin)
 * climate date operators (e.g. in Debian-based Linux distributions package called cdo)
 * netCDF Operators (e.g. in Debian-based Linux distritutions package called nco)
+* proj4
 #### Needed input files
 * Digital elevation model, best in WGS84 - EPSG:4326.
 * Shapefile of the glacier
@@ -74,7 +75,7 @@ your DEM and shapefile and adjust the area to which you want to shrink the DEM. 
 WGS84-EPSG:4326 projection with the units degrees, that the script works correctly. <br>
 Run the script with:
 ```
-python create_static_files_with_command_line.py
+python create_static_files_command_line.py
 ```
 Maybe the following commands are useful. You do not need them for the examples in the data/static folder.<br>
 The first can be used to aggreagate the DEM to a coarse spatial resolution.
@@ -112,11 +113,11 @@ python aws_logger2cosipy.py -c ../data/input/008_station_hintereis_lf_toa5_cr300
 ```
 The script takes all input timestamps which are in the -c input file. If you want only a specific period, you can use the following options at the end of the call.
 ```
-python aws_logger2cosipy.py -c ../data/input/008_station_hintereis_lf_toa5_cr3000_a_small.dat -o 
+python aws_logger2cosipy.py -c ../data/input/008_station_hintereis_lf_toa5_cr3000_a_small.dat -o \
 ../data/input/Hintereisferner_input.nc -s ../data/static/static.nc -b 2018-06-01T00:00 -e 2018-06-02T00:00
 ```
 ## Core run
-### Changes config.py and set everything for your specific need. See in config options.
+### Change config.py and set everything for your specific need. See in config options.
 
 ## Evaluation
 
